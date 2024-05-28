@@ -18,6 +18,7 @@ if (!cached) {
 
 export const connectToDatabase = async () => {
   if (cached.conn) return cached.conn;
+  console.log('Successfully connected to MongoDB database!');
 
   if (!MONGODB_URL) throw new Error("Missing MongoDB url");
 
